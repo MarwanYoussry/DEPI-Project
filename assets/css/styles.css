@@ -58,6 +58,7 @@ body {
   bottom: 0px;
   margin: 0 auto;
   width: 0;
+  transition: .8s;
 }
 
 .nav-link:hover:after,
