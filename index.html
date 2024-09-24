@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body id="go-top" class="px-sm-4 px-md-5">
+  <body id="go-top" class="homepage-body">
     <header>
       <nav class="navbar navbar-expand-md fixed-top">
         <img src="assets/img/restaurant_logo.png" alt="" class="logo" />
@@ -52,13 +52,39 @@
         </div>
       </nav>
     </header>
+    <div id="scene">
+      <div data-depth="0.2" class="parallax-img-1">
+        <img src="assets/img/tomato.png" alt="" />
+      </div>
+      <div data-depth="0.3" class="parallax-img-2">
+        <img src="assets/img/kebab.png" alt="" />
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <h1 class="main-section-header d-block text-center font-monospace">Welcome to Lorem Restaurant.</h1>
+        <p class="main-section-desc lead">
+          Indulge in an unforgettable dining experience where elegance meets culinary artistry. Our sophisticated ambiance, paired with a meticulously curated menu, invites you to savor exquisite flavors and beautifully presented dishes. Each meal is crafted with the finest ingredients, ensuring a memorable journey for your palate. Join us for an evening of refinement and delight, where every detail is designed to elevate your dining experience.
+        </p>
+      </div>
+      <div class="col-12 col-lg-6 banner-img-wp d-flex align-items-center">
+        <img src="assets/img/koshary.jpg" alt="" class="banner-img d-block my-auto">
+      </div>
+    </div>
+
+    
 
 
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
-    <!-- <script src="assets/js/parallax.js"></script> -->
+    <script src="assets/js/parallax.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+      var scene = document.getElementById('scene'); 
+      var parallaxInstance = new Parallax(scene);
+    </script>
   </body>
 </html>

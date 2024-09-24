@@ -49,3 +49,10 @@ function scrollFunction() {
    navbar.style.borderBottom = "0px solid var(--fourth_color)";
   }
 }
+window.addEventListener('resize', handleResize);
+function handleResize() {
+  nav.classList.remove("animateDown");
+  nav.classList.remove("animateUp");
+}
+
+
