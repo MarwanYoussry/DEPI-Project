@@ -296,6 +296,7 @@ html,
 
 
    /* about-style */
+   @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
 .script-font {
   font-family: 'Dancing Script' ,cursive ;
