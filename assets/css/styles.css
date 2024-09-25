@@ -4,25 +4,40 @@
   --third_color: #38598b;
   --fourth_color: #113f67;
 }
+@font-face {
+  font-family: 'OpenSansVariable';
+  src: url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+}
+@font-face {
+  font-family: 'OswaldVariable';
+  src: url('../fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 700;
+}
+@font-face {
+  font-family: 'RalewayVariable';
+  src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+}
 html,
 .homepage-body {
   position: absolute;
   left: 0px;
   overflow-x: hidden;
   width: 100vw;
-  height: 150vh;
-  
 }
-
 .homepage-body {
-
+  height: 200vh;
   margin: 0;
   background-color: var(--first_color);
+  color: var(--fourth_color);
   padding-top: 150px;
   padding-left:10vw ;
   padding-right:10vw;
   background-image: url(../img/menu-bg.png);
-  
+  background-size: cover;
+  font-family: "OpenSansVariable";
 }
 .logo {
   position: fixed;
@@ -34,6 +49,8 @@ html,
   cursor: pointer;
 }
 .navbar {
+  font-family: "RalewayVariable";
+  font-weight: 500;
   box-shadow: 0px 0px 5px var(--third_color);
   height: 105px;
   transition: height 0.7s;
@@ -48,19 +65,19 @@ html,
   letter-spacing: 0;
   transition: all 0.8s;
   font-weight: bolder;
-  color: var(--third_color);
+  color: var(--fourth_color);
   text-shadow: 0px 0px 3px var(--first_color),0px 0px 2px var(--first_color),0px 0px 4px var(--first_color);
 }
 
 .nav-link:hover,
-.nav-link:active {
+.nav-link:active,.active-link {
   letter-spacing: 4px;
   color: var(--fourth_color);
   text-shadow: 0px 0px 3px var(--first_color),0px 0px 2px var(--first_color),0px 0px 4px var(--first_color);
 }
 
 .nav-link:after,
-.nav-link:before {
+.nav-link:before,.active-link {
   border: 1px solid transparent;
   content: "";
   display: block;
@@ -72,7 +89,7 @@ html,
 
 .nav-link:hover:after,
 .nav-link:hover:before {
-  border-color: var(--fourth_color);
+  border-color: var(--third_color);
   transition: width 0.5s;
   width: 70%;
 }
@@ -120,8 +137,8 @@ html,
     margin: auto;
   }
   .dropdown-menu {
-    background-color: transparent;
-    border: 0px solid black;
+    background-color: transparent !important;
+    border: 0px solid black !important;
     width: 100%;
     text-align: center;
     font-size: large;
@@ -208,6 +225,7 @@ html,
   }
 }
 
+
 #scene {
   left: 0px;
   top: 0px;
@@ -224,7 +242,7 @@ html,
   min-width: 250px;
   width: 30vw;
   max-width: 300px;
-  filter: blur(2.5px);
+  filter: blur(1.5px);
 }
 .parallax-img-2 {
   position: relative;
@@ -236,7 +254,7 @@ html,
   bottom: -4vh;
   min-width: 350px;
   width: 30vw;
-  filter: blur(2px);
+  filter: blur(1.5px);
 }
 
 .banner-img-wp {
@@ -247,11 +265,10 @@ html,
 
 .banner-img {
   width: 100%;
-  
   background-size: cover;
   background-position: center;
   animation: biani 4.5s linear infinite alternate;
-  box-shadow: 0px 0px 25px rgba(36, 39, 37, 0.3);
+  box-shadow: 0px 0px 15px var(--fourth_color);
 }
 
 @keyframes biani {
@@ -268,11 +285,17 @@ html,
       border-radius: 40% 60% 43% 57% / 52% 32% 68% 48%;
   }
 }
+@media screen and (max-width:991px) {
+  .banner-img-wp {
+    padding-left: 0px;
+  }
+}
 .main-section-header {
   padding: 6rem 5rem 1rem;
   font-size: 3rem;
-  font-weight: bolder;
+  font-weight: 700;
   text-shadow: 0px 0px 2px var(--third_color);
+  font-family: "RalewayVariable";
 }
 .main-section-desc {
   font-size: 1.5rem;
@@ -286,4 +309,56 @@ html,
 .dropdown-item:hover {
   background-color: var(--fourth_color);
   color: var(--first_color);
+}
+#theme-toggle {
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  border: 5px solid var(--third_color);
+  border-radius: 10px;
+  right: 1vw;
+}
+@media screen and (max-width: 767px) {
+#theme-toggle {
+  position: absolute;
+  left: 10vw;
+  top: 10vw;
+}
+}
+.check-menu {
+  padding: 5px 10px;
+  background-color: var(--third_color);
+  border-radius: 20px;
+  border: 1px solid var(--fourth_color);
+  box-shadow: 0px 0px 3px var(--second_color);
+}
+.check-menu:hover {
+  background-color: var(--second_color);
+}
+.check-menu a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--first_color);
+  text-decoration: none;
+}
+.check-menu a:hover {
+  color: var(--fourth_color);
+}
+.row {
+  position: relative;
+}
+.row::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-shadow: 0x 0px 3px var(--first_color);
+  width: 70vw;
+  height: 2px;
+  background-color: var(--fourth_color);
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+}
+.sec1 {
+  padding-bottom: 200px;
 }

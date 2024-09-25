@@ -49,9 +49,11 @@
               </li>
             </ul>
           </div>
+          <button id="theme-toggle" class="d-block"></button>
         </div>
       </nav>
     </header>
+    
     <div id="scene">
       <div data-depth="0.2" class="parallax-img-1">
         <img src="assets/img/tomato.png" alt="" />
@@ -60,19 +62,21 @@
         <img src="assets/img/kebab.png" alt="" />
       </div>
     </div>
-    
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <h1 class="main-section-header d-block text-center font-monospace">Welcome to Lorem Restaurant.</h1>
-        <p class="main-section-desc lead">
-          Indulge in an unforgettable dining experience where elegance meets culinary artistry. Our sophisticated ambiance, paired with a meticulously curated menu, invites you to savor exquisite flavors and beautifully presented dishes. Each meal is crafted with the finest ingredients, ensuring a memorable journey for your palate. Join us for an evening of refinement and delight, where every detail is designed to elevate your dining experience.
-        </p>
-      </div>
-      <div class="col-12 col-lg-6 banner-img-wp d-flex align-items-center">
-        <img src="assets/img/koshary.jpg" alt="" class="banner-img d-block my-auto">
+    <div class="container-fluid">
+      <div class="row sec1">
+        <div class="col-12 col-lg-6">
+          <h1 class="main-section-header d-block text-center">Welcome to Lorem Restaurant.</h1>
+          <p class="main-section-desc lead">
+            Indulge in an unforgettable dining experience where elegance meets culinary artistry. Our sophisticated ambiance, paired with a meticulously curated menu, invites you to savor exquisite flavors and beautifully presented dishes. Each meal is crafted with the finest ingredients, ensuring a memorable journey for your palate. Join us for an evening of refinement and delight, where every detail is designed to elevate your dining experience.
+          </p>
+          <button class="check-menu mx-auto d-block my-4"><a href="menu-products.html">Check Our Menu</a></button>
+        </div>
+        <div class="col-12 col-lg-6 banner-img-wp d-flex align-items-center">
+          <img src="assets/img/koshary.jpg" alt="" class="banner-img d-block my-auto">
+        </div>
       </div>
     </div>
-
+    
     
 
 
@@ -85,6 +89,30 @@
     <script>
       var scene = document.getElementById('scene'); 
       var parallaxInstance = new Parallax(scene);
+      const toggleButton = document.getElementById('theme-toggle');
+
+const isDark = localStorage.getItem('theme') === 'dark';
+setTheme(isDark);
+
+toggleButton.addEventListener('click', () => {
+    const currentIsDark = localStorage.getItem('theme') === 'dark';
+    setTheme(!currentIsDark);
+    localStorage.setItem('theme', currentIsDark ? 'light' : 'dark');
+});
+
+function setTheme(isDark) {
+    if (isDark) {
+        document.documentElement.style.setProperty('--first_color', '#e7eaf6');
+        document.documentElement.style.setProperty('--second_color', '#a2a8d3');
+        document.documentElement.style.setProperty('--third_color', '#38598b');
+        document.documentElement.style.setProperty('--fourth_color', '#113f67');
+    } else {
+        document.documentElement.style.setProperty('--first_color', '#113f67');
+        document.documentElement.style.setProperty('--second_color', '#38598b');
+        document.documentElement.style.setProperty('--third_color', '#a2a8d3');
+        document.documentElement.style.setProperty('--fourth_color', '#e7eaf6');
+    }
+}
     </script>
   </body>
 </html>
