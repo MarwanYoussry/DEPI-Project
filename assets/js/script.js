@@ -56,3 +56,67 @@ function handleResize() {
 }
 
 
+
+
+
+  //  about-js
+
+
+    // تحريك الأقسام الرئيسية عند التمرير
+    gsap.registerPlugin(ScrollTrigger);
+
+    // تحريك العناوين
+    gsap.from(".section-title", {
+        scrollTrigger: {
+            trigger: ".section-title",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1
+    });
+
+    // تحريك الفقرات
+    gsap.from(".section1-paragraph, .section2-paragraph", {
+        scrollTrigger: {
+            trigger: ".section1-paragraph, .section2-paragraph",
+            start: "top 90%",
+            toggleActions: "play none none none"
+        },
+        opacity: 0,
+        y: 30,
+        duration: 1.5,
+        stagger: 0.3 // تفعيل الفقرات بالتتابع
+    });
+
+    // تحريك الصور
+    gsap.from(".img-fluid", {
+        scrollTrigger: {
+            trigger: ".img-fluid",
+            start: "top 75%",
+            toggleActions: "play none none none"
+        },
+        opacity: 0,
+        scale: 0.9,
+        duration: 1
+    });
+
+    // تحريك النصوص في قسم الكوكتيلات
+    gsap.from(".cocktail-section h2, .cocktail-section h3", {
+        scrollTrigger: {
+            trigger: ".cocktail-section",
+            start: "top 75%",
+            toggleActions: "play none none none"
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2
+    });
+
+
+    
+  
+ 
+
