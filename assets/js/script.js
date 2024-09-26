@@ -55,68 +55,26 @@ function handleResize() {
   nav.classList.remove("animateUp");
 }
 
+const toggleButton = document.getElementById('theme-toggle');
+const isDark = localStorage.getItem('theme') === 'dark';
+setTheme(isDark);
 
+toggleButton.addEventListener('click', () => {
+    const currentIsDark = localStorage.getItem('theme') === 'dark';
+    setTheme(!currentIsDark);
+    localStorage.setItem('theme', currentIsDark ? 'light' : 'dark');
+});
 
-
-
-  //  about-js
-
-
-    // تحريك الأقسام الرئيسية عند التمرير
-    gsap.registerPlugin(ScrollTrigger);
-
-    // تحريك العناوين
-    gsap.from(".section-title", {
-        scrollTrigger: {
-            trigger: ".section-title",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1
-    });
-
-    // تحريك الفقرات
-    gsap.from(".section1-paragraph, .section2-paragraph", {
-        scrollTrigger: {
-            trigger: ".section1-paragraph, .section2-paragraph",
-            start: "top 90%",
-            toggleActions: "play none none none"
-        },
-        opacity: 0,
-        y: 30,
-        duration: 1.5,
-        stagger: 0.3 // تفعيل الفقرات بالتتابع
-    });
-
-    // تحريك الصور
-    gsap.from(".img-fluid", {
-        scrollTrigger: {
-            trigger: ".img-fluid",
-            start: "top 75%",
-            toggleActions: "play none none none"
-        },
-        opacity: 0,
-        scale: 0.9,
-        duration: 1
-    });
-
-    // تحريك النصوص في قسم الكوكتيلات
-    gsap.from(".cocktail-section h2, .cocktail-section h3", {
-        scrollTrigger: {
-            trigger: ".cocktail-section",
-            start: "top 75%",
-            toggleActions: "play none none none"
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.2
-    });
-
-
-    
-  
- 
-
+function setTheme(isDark) {
+    if (isDark) {
+        document.documentElement.style.setProperty('--first_color', '#e7eaf6');
+        document.documentElement.style.setProperty('--second_color', '#a2a8d3');
+        document.documentElement.style.setProperty('--third_color', '#38598b');
+        document.documentElement.style.setProperty('--fourth_color', '#113f67');
+    } else {
+        document.documentElement.style.setProperty('--first_color', '#113f67');
+        document.documentElement.style.setProperty('--second_color', '#38598b');
+        document.documentElement.style.setProperty('--third_color', '#a2a8d3');
+        document.documentElement.style.setProperty('--fourth_color', '#e7eaf6');
+    }
+}

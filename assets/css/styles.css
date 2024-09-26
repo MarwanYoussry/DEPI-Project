@@ -20,7 +20,17 @@
   src: url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
 }
-html,
+.Raleway-font {
+  font-family: "RalewayVariable"
+}
+.Oswald-font {
+  font-family: "OswaldVariable";
+}
+.OpenSans-font {
+  font-family: "OpenSansVariable";
+}
+
+.home-html,
 .homepage-body {
   position: absolute;
   left: 0px;
@@ -37,7 +47,6 @@ html,
   padding-right:10vw;
   background-image: url(../img/menu-bg.png);
   background-size: cover;
-  font-family: "OpenSansVariable";
 }
 .logo {
   position: fixed;
@@ -49,7 +58,6 @@ html,
   cursor: pointer;
 }
 .navbar {
-  font-family: "RalewayVariable";
   font-weight: 500;
   box-shadow: 0px 0px 5px var(--third_color);
   height: 105px;
@@ -68,7 +76,6 @@ html,
   color: var(--fourth_color);
   text-shadow: 0px 0px 3px var(--first_color),0px 0px 2px var(--first_color),0px 0px 4px var(--first_color);
 }
-
 .nav-link:hover,
 .nav-link:active,.active-link {
   letter-spacing: 4px;
@@ -93,11 +100,12 @@ html,
   transition: width 0.5s;
   width: 70%;
 }
+
 .dropdown-item {
   font-weight: bolder;
   color: var(--fourth_color);
 }
- .toggle-nav-mob {
+.toggle-nav-mob {
   display: none;
 }
 .shrink-nav {
@@ -112,7 +120,7 @@ html,
     padding-top: 100px;
   }
   .main-section-header {
-    padding-top: 0px !important;
+    padding: 0px !important;
   }
   .nav-item {
     position: relative;
@@ -250,8 +258,8 @@ html,
 }
 .parallax-img-2 > img {
   position: absolute;
-  left: -6vw;
-  bottom: -4vh;
+  left: -8vh;
+  bottom: -10vh;
   min-width: 350px;
   width: 30vw;
   filter: blur(1.5px);
@@ -295,7 +303,6 @@ html,
   font-size: 3rem;
   font-weight: 700;
   text-shadow: 0px 0px 2px var(--third_color);
-  font-family: "RalewayVariable";
 }
 .main-section-desc {
   font-size: 1.5rem;
@@ -341,30 +348,48 @@ html,
   color: var(--first_color);
   text-decoration: none;
 }
-.check-menu a:hover {
+.check-menu:hover a {
   color: var(--fourth_color);
 }
-.row {
+.home-row {
   position: relative;
+  min-height: 100vh;
 }
-.row::after {
+.home-row::after {
   content: "";
   display: block;
   position: absolute;
-  box-shadow: 0x 0px 3px var(--first_color);
-  width: 70vw;
-  height: 2px;
+  box-shadow: 0px 0px 5px var(--first_color);
+  border-radius: 50%;
+  width: 50vw;
+  height: 5px;
   background-color: var(--fourth_color);
   left: 50%;
   bottom: 0px;
   transform: translateX(-50%);
 }
-.sec1 {
-  padding-bottom: 200px;
+.testimonial-container {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 }
-
-
-
+.testimonial-card {
+  position: relative;
+  border: 2px solid var(--fourth_color);
+  width: 90%;
+  min-height: 70%;
+}
+.testimonial-up {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+}
+.testimonial-paragraph {
+  height: 70%
+}
 
 
 
@@ -380,6 +405,7 @@ html,
 .about-body{
   margin: 0;
   background-color: var(--first_color);
+  color: var(--fourth_color);
   padding-top: 150px;
   padding-left:10vw ;
   padding-right:10vw;
@@ -418,7 +444,6 @@ html,
 }
 
 .section-title {
-   
     text-shadow: 0px 0px 2px var(--third_color);
 }
 
@@ -433,5 +458,4 @@ html,
   object-position: center;
   height: 100%;
   width: 100%; 
-  
 } 

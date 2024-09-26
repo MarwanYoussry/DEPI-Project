@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body id="go-top" class="homepage-body">
+  <body  class="homepage-body OpenSans-font">
+    <span id="go-top"></span>
     <header>
-      <nav class="navbar navbar-expand-md fixed-top">
+      <nav class="navbar navbar-expand-md fixed-top Raleway-font">
         <img src="assets/img/restaurant_logo.png" alt="" class="logo" />
         <div class="toggle-nav-mob">
           <i class="bi bi-list"></i>
         </div>
-
         <div class="container-fluid nav-mobile">
           <div class="offset-md-5 col-md-7 col-12">
             <ul class="navbar-nav justify-content-around">
@@ -62,10 +62,12 @@
         <img src="assets/img/kebab.png" alt="" />
       </div>
     </div>
+
     <div class="container-fluid">
-      <div class="row sec1">
+
+      <div class="row home-row pb-3 pb-md-5 ">
         <div class="col-12 col-lg-6">
-          <h1 class="main-section-header d-block text-center">Welcome to Lorem Restaurant.</h1>
+          <h1 class="main-section-header d-block text-center Raleway-font">Welcome to Lorem Restaurant.</h1>
           <p class="main-section-desc lead">
             Indulge in an unforgettable dining experience where elegance meets culinary artistry. Our sophisticated ambiance, paired with a meticulously curated menu, invites you to savor exquisite flavors and beautifully presented dishes. Each meal is crafted with the finest ingredients, ensuring a memorable journey for your palate. Join us for an evening of refinement and delight, where every detail is designed to elevate your dining experience.
           </p>
@@ -75,6 +77,70 @@
           <img src="assets/img/koshary.jpg" alt="" class="banner-img d-block my-auto">
         </div>
       </div>
+        
+      <div class="row">
+          <h2 class="d-block text-center Raleway-font fw-bold my-5">Testimonials</h2>
+          <div class="col-12 col-md-6 col-xl-4 testimonial-container">
+            <div class="testimonial-card m-auto">
+              <div class="testimonial-up">
+                
+              </div>
+              <div class="testimonial-paragraph">
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 testimonial-container">
+            <div class="testimonial-card m-auto">
+              <div class="testimonial-up">
+                
+              </div>
+              <div class="testimonial-paragraph">
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 testimonial-container">
+            <div class="testimonial-card m-auto">
+              <div class="testimonial-up">
+                
+              </div>
+              <div class="testimonial-paragraph">
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 testimonial-container">
+            <div class="testimonial-card m-auto">
+              <div class="testimonial-up">
+                
+              </div>
+              <div class="testimonial-paragraph">
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 testimonial-container">
+            <div class="testimonial-card m-auto">
+              <div class="testimonial-up">
+                
+              </div>
+              <div class="testimonial-paragraph">
+  
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 testimonial-container">
+            <div class="testimonial-card m-auto">
+              <div class="testimonial-up">
+                
+              </div>
+              <div class="testimonial-paragraph">
+  
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     
     
@@ -89,30 +155,6 @@
     <script>
       var scene = document.getElementById('scene'); 
       var parallaxInstance = new Parallax(scene);
-      const toggleButton = document.getElementById('theme-toggle');
-
-const isDark = localStorage.getItem('theme') === 'dark';
-setTheme(isDark);
-
-toggleButton.addEventListener('click', () => {
-    const currentIsDark = localStorage.getItem('theme') === 'dark';
-    setTheme(!currentIsDark);
-    localStorage.setItem('theme', currentIsDark ? 'light' : 'dark');
-});
-
-function setTheme(isDark) {
-    if (isDark) {
-        document.documentElement.style.setProperty('--first_color', '#e7eaf6');
-        document.documentElement.style.setProperty('--second_color', '#a2a8d3');
-        document.documentElement.style.setProperty('--third_color', '#38598b');
-        document.documentElement.style.setProperty('--fourth_color', '#113f67');
-    } else {
-        document.documentElement.style.setProperty('--first_color', '#113f67');
-        document.documentElement.style.setProperty('--second_color', '#38598b');
-        document.documentElement.style.setProperty('--third_color', '#a2a8d3');
-        document.documentElement.style.setProperty('--fourth_color', '#e7eaf6');
-    }
-}
     </script>
   </body>
 </html>
