@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 :root {
   --first_color: #e7eaf6;
   --second_color: #a2a8d3;
@@ -38,7 +39,7 @@
   width: 100vw;
 }
 .homepage-body {
-  height: 200vh;
+  height: 500vh;
   margin: 0;
   background-color: var(--first_color);
   color: var(--fourth_color);
@@ -245,9 +246,8 @@
 }
 .parallax-img-1 > img {
   position: absolute;
-  left: 85vw;
+  right: 20px;
   top: 110px;
-  min-width: 250px;
   width: 30vw;
   max-width: 300px;
   filter: blur(1.5px);
@@ -258,10 +258,10 @@
 }
 .parallax-img-2 > img {
   position: absolute;
-  left: -8vh;
+  left: -5vh;
   bottom: -10vh;
-  min-width: 350px;
-  width: 30vw;
+  width: 35vw;
+  max-width: 500px;
   filter: blur(1.5px);
 }
 
@@ -379,7 +379,7 @@
   position: relative;
   border: 2px solid var(--fourth_color);
   width: 90%;
-  min-height: 70%;
+  height: 70%;
 }
 .testimonial-up {
   width: 100%;
@@ -396,7 +396,7 @@
 
 
    /* about-style */
-   @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+   
 
 .script-font {
   font-family: 'Dancing Script' ,cursive ;
