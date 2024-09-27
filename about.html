@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    
+    
   </head>
   <body class="about-body" id="go-top">
     <header>
@@ -63,7 +66,6 @@
         <h1 class="text-white display-4 script-font">About Us</h1>
       </div>
     </header>
-
     <main class="container my-5">
       <section class="row align-items-center mb-5">
         <div class="col-md-6">
@@ -223,12 +225,157 @@
       </div>
     </section>
 
+
+    <section class="our-team-section my-5">
+      <h2 class="script-font section-title display-4 text-center mb-5">Our Team</h2>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-id="1">
+            <div class="team-member">
+             <img src="assets/img/c1.jpg" alt="Team Member 1" class="img-fluid rounded-circle mb-3">
+              <h3 class="h4">John Doe</h3>
+              <p class="text">Executive Chef</p>
+              <div class="social-icon">
+                <ul>
+                    <li>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-id="2">
+            <div class="team-member">
+              <img src="assets/img/c2.jpg" alt="Team Member 2" class="img-fluid rounded-circle mb-3">
+              <h3 class="h4">Jane Smith</h3>
+              <p class="text">Sous Chef</p>
+              <div class="social-icon">
+                <ul>
+                    <li>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-id="3">
+            <div class="team-member">
+              <img src="assets/img/c3.jpg" alt="Team Member 3" class="img-fluid rounded-circle mb-3">
+              <h3 class="h4">Mike Johnson</h3>
+              <p class="text">Pastry Chef</p>
+              <div class="social-icon">
+                <ul>
+                    <li>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+          </div>
+          <div class="swiper-slide" data-id="4">
+            <div class="team-member">
+              <img src="assets/img/c4.jpg" alt="Team Member 4" class="img-fluid rounded-circle mb-3">
+              <h3 class="h4">Emily Brown</h3>
+              <p class="text">Restaurant Manager</p>
+              <div class="social-icon">
+                <ul>
+                    <li>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div> 
+          <div class="swiper-slide" data-id="5">
+            <div class="team-member">
+              <img src="assets/img/c5.jpg" alt="Team Member 5" class="img-fluid rounded-circle mb-3">
+              <h3 class="h4">Priyotosh Dey</h3>
+              <p class="text">Restaurant Manager</p>
+              <div class="social-icon">
+                <ul>
+                    <li>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+          </div> 
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>   
+  
+
+
+ 
+
+
+  
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/parallax.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+ 
+
     <script>
+
       //  about-js
 
       // تحريك الأقسام الرئيسية عند التمرير
@@ -283,6 +430,43 @@
         duration: 1,
         stagger: 0.2,
       });
+
+
+// our team swiper
+  var swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        speed: 2000,
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
     </script>
   </body>
 </html>
