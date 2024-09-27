@@ -39,7 +39,6 @@
   width: 100vw;
 }
 .homepage-body {
-  height: 500vh;
   margin: 0;
   background-color: var(--first_color);
   color: var(--fourth_color);
@@ -373,24 +372,63 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  
 }
 .testimonial-card {
   position: relative;
-  border: 2px solid var(--fourth_color);
+  box-shadow: var(--second_color) 0px 5px 15px;
   width: 90%;
   height: 70%;
+  background-image: linear-gradient(var(--first_color) ,var(--fourth_color) 200% );
+  border-radius: 35px;
+  transition: 0.4s;
+}
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px var(--fourth_color);
+ 
 }
 .testimonial-up {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 30%;
+  height: 35%;
+  
+}
+.testimonial-up div:first-child {
+  width: 50%;
+}
+.testimonial-up div img {
+  width: 150px; /* Adjust as needed */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; /* Maintains aspect ratio */
+  position: relative;
+  left: 5%;
+  top: -40%;
+  border: 1px solid var(--fourth_color);
+}
+.testimonial-up div:nth-child(2) {
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 40%;
+  justify-content: center;
 }
 .testimonial-paragraph {
-  height: 70%
+  height: 65%;
+  padding: 1rem 2rem;
 }
-
+.testimonial-paragraph h3 {
+  margin: 0px 0px 15px;
+  font-family: "OswaldVariable";
+  letter-spacing: 1px;
+}
+.testimonial-paragraph p {
+ font-size: large;
+ font-weight: 500;
+ text-shadow: 0px 0px 2px var(--first_color);
+}
 
 
 
