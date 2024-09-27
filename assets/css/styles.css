@@ -611,17 +611,24 @@
   background: linear-gradient(145deg, #e3a92b, #ffc933);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1180px) {
   .dish-img {
-    padding-left: 25px;
-    width: 540px;
-    height: 400px;
+    padding-left: 5px;
+    width: 240px;
+   height: 300px;
   }
 }
-@media screen and (min-width: 367px) {
+@media screen and (max-width: 990px) {
   .dish-img {
-    padding-left: 3px;
-    width: 340px;
+    padding-left: 5px;
+    width: 300px;
+   height: 300px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dish-img {
+    padding-left: 10px;
+    width: 540px;
     height: 300px;
   }
 }
