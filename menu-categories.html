@@ -7,6 +7,101 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <style>
+      :root {
+        --first_color: #e7eaf6;
+        --second_color: #a2a8d3;
+        --third_color: #38598b;
+        --fourth_color: #113f67;
+      }
+  
+      body {
+        background-image: url("./assets/img/menu-bg.png");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        background-color: var(--first_color);
+        color: var(--fourth_color);
+        margin: 0;
+        padding: 0;
+      }
+  
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px;
+      }
+  
+      .category {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+      }
+  
+      .category:hover {
+        transform: scale(1.05);
+      }
+  
+      .category img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+  
+      .category h3 {
+        margin-top: 15px;
+        font-size: 1.8rem;
+        color: var(--fourth_color);
+      }
+  
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 63, 103, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+  
+      .category:hover .overlay {
+        opacity: 1;
+      }
+  
+      .overlay h3 {
+        color: var(--first_color);
+        margin: 0;
+        padding-bottom: 10px;
+      }
+  
+      .learn-more {
+        color: var(--first_color);
+        background-color: var(--third_color);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+      }
+  
+      .learn-more:hover {
+        background-color: var(--fourth_color);
+      }
+  
+    </style>
   </head>
   <body id="go-top" class="px-sm-4 px-md-5">
     <header>
@@ -55,15 +150,61 @@
         </div>
       </nav>
     </header>
-
-
-    
-
-
-
-
-
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 style="text-align: center;font-size: 2.5rem;font-weight: 400;margin-bottom: 40px;text-transform: uppercase;">ALL Categories</h2>
+    <div class="gallery">
+      <div class="category" id="breakfast">
+        <img src="C:\Users\Blu-Ray\Documents\GitHub\DEPI-Project\assets\img\Breakfast.jpg" alt="Breakfast">
+        <div class="overlay">
+          <h3>Breakfast</h3>
+          <a href="breakfast.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+  
+      <div class="category" id="lunch">
+        <img src="C:\Users\Blu-Ray\Documents\GitHub\DEPI-Project\assets\img\lunch.jpeg" alt="Lunch">
+        <div class="overlay">
+          <h3>Lunch</h3>
+          <a href="lunch.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+  
+      <div class="category" id="dinner">
+        <img src="C:\Users\Blu-Ray\Documents\GitHub\DEPI-Project\assets\img\dinner.jpg" alt="Dinner">
+        <div class="overlay">
+          <h3>Dinner</h3>
+          <a href="dinner.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+  
+      <div class="category" id="dessert">
+        <img src="C:\Users\Blu-Ray\Documents\GitHub\DEPI-Project\assets\img\dessert.jpg" alt="Dessert">
+        <div class="overlay">
+          <h3>Dessert</h3>
+          <a href="dessert.html" class="learn-more">Learn More</a>
+        </div> 
+      </div>
+  
+      <div class="category" id="meals">
+        <img src="C:\Users\Blu-Ray\Documents\GitHub\DEPI-Project\assets\img\meals.jpg" alt="Meals">
+        <div class="overlay">
+          <h3>Meals</h3>
+          <a href="meals.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+  
+      <div class="category" id="offers">
+        <img src="C:\Users\Blu-Ray\Documents\GitHub\DEPI-Project\assets\img\offers.jpg" alt="Offers">
+        <div class="overlay">
+          <h3>Offers</h3>
+          <a href="offers.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
