@@ -532,12 +532,14 @@
   transform: scale(1.03);
 }
 
-.dist-img {
+.dish-img {
   margin-top: -130px;
   margin-bottom: 30px;
+  width: 340px;
+  height: 300px;
 }
 
-.dist-img img {
+.dish-img img {
   box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #ffffff;
   border-radius: 50%;
   overflow: hidden;
@@ -546,6 +548,7 @@
 .dish-rating {
   font-size: 20px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .dish-title {
@@ -562,10 +565,47 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-weight: 900;
+  text-align: center;
 }
-.dist-bottom-row {
-  padding: 0 30px;
-  color: var(--fourth_color);;
+.dish-info ul, .dist-bottom-row ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.dish-info ul li {
+  display: inline-block;
+  flex: 1;
+}
+
+.dish-info ul li:last-child {
+  text-align: right;
+  border-left: 2px solid rgb(204 204 204 / 30%);
+}
+
+.dist-bottom-row ul li:last-child {
+  text-align: right;
+}
+
+.dish-info ul li p {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+  font-weight: 300;
+}
+
+.dish-info ul li b {
+  font-weight: 600;
+}
+.dish-info {
+  border-bottom: 2px solid rgb(204 204 204 / 30%);
+  padding-bottom: 20px;
+}
+
+.dist-bottom-row,.dish-info {
+  padding-top: 20px;
+  color: var(--fourth_color);
+  text-align: center;
 }
 
 .btn {
@@ -581,4 +621,19 @@
 
 .btn:hover {
   background: linear-gradient(145deg, #e3a92b, #ffc933);
+}
+
+@media screen and (max-width: 767px) {
+  .dish-img {
+    padding-left: 25px;
+    width: 540px;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 367px) {
+  .dish-img {
+    padding-left: 3px;
+    width: 340px;
+    height: 300px;
+  }
 }
