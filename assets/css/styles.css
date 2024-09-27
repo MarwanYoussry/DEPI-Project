@@ -39,7 +39,6 @@
   width: 100vw;
 }
 .homepage-body {
-  height: 500vh;
   margin: 0;
   background-color: var(--first_color);
   color: var(--fourth_color);
@@ -373,25 +372,76 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  
+  
 }
 .testimonial-card {
   position: relative;
-  border: 2px solid var(--fourth_color);
+  box-shadow: var(--second_color) 0px 5px 15px;
   width: 90%;
   height: 70%;
+  background-image: linear-gradient(var(--first_color) ,var(--fourth_color) 200% );
+  border-radius: 35px;
+  transition: 0.4s;
+}
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px var(--fourth_color);
+ 
 }
 .testimonial-up {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 30%;
+  height: 35%;
+  
+}
+.testimonial-up div:first-child {
+  width: 50%;
+}
+.testimonial-up div img {
+  width: 150px; /* Adjust as needed */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; /* Maintains aspect ratio */
+  position: relative;
+  left: 5%;
+  top: -40%;
+  border: 1px solid var(--fourth_color);
+}
+.testimonial-up div:nth-child(2) {
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 40%;
+  justify-content: center;
 }
 .testimonial-paragraph {
-  height: 70%
+  height: 65%;
+  padding: 1rem 2rem;
 }
-
-
+.testimonial-paragraph h3 {
+  margin: 0px 0px 15px;
+  font-family: "OswaldVariable";
+  letter-spacing: 1px;
+}
+.testimonial-paragraph p {
+ font-size: large;
+ font-weight: 500;
+ text-shadow: 0px 0px 2px var(--first_color);
+}
+@media screen and (max-width:600px) {
+  .testimonial-card {
+    width:100%;
+  }
+  .testimonial-paragraph {
+    height: 65%;
+    padding: 0.1rem 1rem;
+  }
+  .testimonial-paragraph h3 {
+    margin: 0px 0px 10px;
+  }
+}
 
 
 
@@ -482,20 +532,16 @@
   transform: scale(1.03);
 }
 
-.dist-img {
+.dish-img {
   margin-top: -130px;
   margin-bottom: 30px;
+  width: 100%;
+  height: 300px;
 }
-
-.dist-img img {
-  box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #ffffff;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 .dish-rating {
   font-size: 20px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .dish-title {
@@ -512,10 +558,47 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-weight: 900;
+  text-align: center;
 }
-.dist-bottom-row {
-  padding: 0 30px;
-  color: var(--fourth_color);;
+.dish-info ul, .dist-bottom-row ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.dish-info ul li {
+  display: inline-block;
+  flex: 1;
+}
+
+.dish-info ul li:last-child {
+  text-align: right;
+  border-left: 2px solid rgb(204 204 204 / 30%);
+}
+
+.dist-bottom-row ul li:last-child {
+  text-align: right;
+}
+
+.dish-info ul li p {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+  font-weight: 300;
+}
+
+.dish-info ul li b {
+  font-weight: 600;
+}
+.dish-info {
+  border-bottom: 2px solid rgb(204 204 204 / 30%);
+  padding-bottom: 20px;
+}
+
+.dist-bottom-row,.dish-info {
+  padding-top: 20px;
+  color: var(--fourth_color);
+  text-align: center;
 }
 
 .btn {
@@ -532,3 +615,5 @@
 .btn:hover {
   background: linear-gradient(145deg, #e3a92b, #ffc933);
 }
+
+
