@@ -436,6 +436,7 @@
   var swiper = new Swiper(".swiper", {
         slidesPerView: 3,
         spaceBetween: 30,
+         centeredSlides:true,
         loop: true,
         autoplay: {
             delay: 3000,
@@ -446,12 +447,34 @@
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+           
         },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+            
         },
+
         breakpoints: {
+    0: {
+        slidesPerView: 1, // للهواتف الصغيرة جداً
+    },
+    480: {
+        slidesPerView: 1.5, // للهواتف الأكبر حجماً
+    },
+    768: {
+        slidesPerView: 2, // للأجهزة اللوحية
+    },
+    1024: {
+        slidesPerView: 2.5, // للأجهزة اللوحية الكبيرة
+    },
+    1200: {
+        slidesPerView: 3, // لأجهزة سطح المكتب
+    },
+   
+}, 
+/*          breakpoints: {
+          
             0: {
                 slidesPerView: 1.2,
             },
@@ -464,8 +487,8 @@
             1200: {
                 slidesPerView: 3,
             },
-        },
-    });
+        }, */
+    }); 
 
     </script>
   </body>
