@@ -651,7 +651,10 @@ border-color: var(--third_color);
 .swiper {
 padding: 20px 0;
 }
-
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
 .swiper-button-next,
 .swiper-button-prev {
 color: var(--third_color); 
