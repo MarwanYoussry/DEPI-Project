@@ -471,14 +471,10 @@
     width: 100%;
     height: 300px;}
 
-    .dist-img img {
-      box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #ffffff;
-      border-radius: 50%;
-      overflow: hidden;}
-
       .dish-rating {
         font-size: 20px;
-        margin-bottom: 15px;}
+        margin-bottom: 15px;
+        text-align: center;}
 
         .dish-title {
           padding: 0 30px;
@@ -500,37 +496,40 @@
             border-bottom: 2px solid rgb(204 204 204 / 30%);
             padding-bottom: 20px;}
 
-          .dish-info ul, .dist-bottom-row ul {
+          .dish-info ul {
             display: flex;
             justify-content: space-between;
             text-align: left;}
-
-            .dish-info ul li:last-child {
+          .dish-info ul li {
+            display: inline-block;
+            flex: 1;
+          }
+          .dish-info ul li:last-child {
               text-align: right;
-              border-left: 2px solid rgb(204 204 204 / 30%);}
+              border-left: 2px solid rgb(204 204 204 / 30%);
+              
+            }
 
-              .dish-info ul li p {
-                font-size: 18px;
-                text-transform: capitalize;
-                margin-bottom: 2px;
-                font-weight: 300;}
-
-                .dish-info ul li b {
-                  font-weight: 600;}
-
-
+          .dish-info ul li p {
+            font-size: 18px;
+            text-transform: capitalize;
+            margin-bottom: 2px;
+            font-weight: 300;}
+                  
+          .dish-info {
+            border-bottom: 2px solid rgb(204 204 204 / 30%);
+            margin: 30px 0 30px;
+            padding-bottom: 30px;
+          }
           .dist-bottom-row {
             padding: 0 30px;
-            color: var(--fourth_color);;
+            color: var(--fourth_color);
           }
 
-          .dist-bottom-row,.dish-info {
+          .dist-bottom-row {
             padding-top: 20px;
             color: var(--fourth_color);
             text-align: center;}
-
-          .dist-bottom-row ul li:last-child {
-            text-align: right;}
 
           .btn {
             width: auto;
@@ -675,7 +674,7 @@ align-items: center;
 list-style: none; 
 padding: 0; 
 margin: 0; 
-display: flex; /
+display: flex;
 }
 
 .social-icon ul li {
