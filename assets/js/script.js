@@ -1,8 +1,7 @@
+/* Navbar on mobile devices */
 let btn = document.querySelector(".toggle-nav-mob");
 let nav = document.querySelector(".nav-mobile");
 let ico = document.querySelector(".bi");
-let navbar = document.querySelector(".navbar");
-let logo = document.querySelector(".logo");
 let toggle = true;
 btn.addEventListener("click", move);
 function move() {
@@ -27,34 +26,41 @@ function move() {
   }
 }
 
-window.onscroll = function () {
-  scrollFunction();
-};
-function scrollFunction() {
-  if (
-    document.documentElement.scrollTop > 4 &&
-    document.documentElement.clientWidth > 767
-  ) {
-    navbar.style.height = "95px";
-    navbar.style.paddingTop = "0px";
-    navbar.style.paddingBottom = "0px";
-    navbar.style.backdropFilter = "blur(6px)";
-    navbar.style.borderBottom = "2px solid var(--fourth_color)";
-
-  } else {
-   navbar.style.height = "105px";
-   navbar.style.paddingTop = "8px";
-   navbar.style.paddingBottom = "8px";
-   navbar.style.backdropFilter = "blur(0px)";
-   navbar.style.borderBottom = "0px solid var(--fourth_color)";
-  }
-}
+/* Resetting Navbar button on browser resizing */
 window.addEventListener('resize', handleResize);
 function handleResize() {
   nav.classList.remove("animateDown");
   nav.classList.remove("animateUp");
+  ico.classList.add("bi-list");
+  ico.classList.remove("bi-x-lg");
+  toggle = true;
 }
 
+/* Navbar shrink on scroll */
+let navbar = document.querySelector(".navbar");
+let ticking = false;
+function onScroll() {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            if (
+              document.documentElement.scrollTop > 4 &&
+              document.documentElement.clientWidth > 767
+            ) {
+              navbar.classList.add("navbar-shrink")
+            } else {
+              navbar.classList.remove("navbar-shrink")
+            }
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+window.addEventListener('scroll', onScroll);
+
+
+
+
+/* Dark Mode Implementation  */
 const toggleButton = document.getElementById('theme-toggle');
 const isDark = localStorage.getItem('theme') === 'dark';
 setTheme(isDark);
