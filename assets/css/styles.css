@@ -754,3 +754,39 @@ footer {
   font-size: 1.7rem;
   cursor: pointer;
 }
+
+
+/* all products */
+
+
+
+/* Additional Styles for Better Organization */
+.product-details .row {
+  padding: 20px;
+  border-bottom: 1px solid var(--second_color); /* Updated border color */
+}
+
+.product-details .row:last-child {
+  border-bottom: none;
+}
+
+.product-details .row .col-md-6 {
+  padding: 10px;
+}
+
+.product-details .row .col-md-6 img {
+  max-height: 200px;
+}
+
+.product-details .row .col-md-6 h3 {
+  margin-top: 0;
+}
+
+.product-details .row .col-md-6 p {
+  margin-bottom: 5px;
+}
+
+.product-details .row .col-md-6 .btn-primary {
+  margin-top: 10px;
+  color: var(--first_color); /* Ensure button text is readable */
+}
