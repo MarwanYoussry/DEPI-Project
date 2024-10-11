@@ -384,6 +384,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 1s;
 }
 .testimonial-card {
   position: relative;
