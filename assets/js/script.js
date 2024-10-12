@@ -1,64 +1,53 @@
 /* Navbar on mobile devices */
-let btn = document.querySelector(".toggle-nav-mob");
-let nav = document.querySelector(".nav-mobile");
-let ico = document.querySelector(".bi");
+const btn = document.querySelector(".toggle-nav-mob");
+const nav = document.querySelector(".nav-mobile");
+const ico = document.querySelector(".bi");
 let toggle = true;
-btn.addEventListener("click", move);
-function move() {
-  if (toggle) {
-    moveDown();
-  } else {
-    moveUp();
-  }
-  function moveDown() {
+
+btn.addEventListener("click", () => {
+    toggle ? moveDown() : moveUp();
+});
+
+const toggleNavClasses = (addClass, removeClass, iconAdd, iconRemove) => {
+    nav.classList.add(addClass);
+    nav.classList.remove(removeClass);
+    ico.classList.add(iconAdd);
+    ico.classList.remove(iconRemove);
+};
+
+const moveDown = () => {
     toggle = false;
-    nav.classList.add("animateDown");
-    nav.classList.remove("animateUp");
-    ico.classList.add("bi-x-lg");
-    ico.classList.remove("bi-list");
-  }
-  function moveUp() {
+    toggleNavClasses("animateDown", "animateUp", "bi-x-lg", "bi-list");
+};
+
+const moveUp = () => {
     toggle = true;
-    nav.classList.add("animateUp");
-    nav.classList.remove("animateDown");
-    ico.classList.add("bi-list");
-    ico.classList.remove("bi-x-lg");
-  }
-}
+    toggleNavClasses("animateUp", "animateDown", "bi-list", "bi-x-lg");
+};
 
 /* Resetting Navbar button on browser resizing */
-window.addEventListener('resize', handleResize);
-function handleResize() {
-  nav.classList.remove("animateDown");
-  nav.classList.remove("animateUp");
-  ico.classList.add("bi-list");
-  ico.classList.remove("bi-x-lg");
-  toggle = true;
-}
+window.addEventListener('resize', () => {
+    nav.classList.remove("animateDown", "animateUp");
+    ico.classList.replace("bi-x-lg", "bi-list");
+    toggle = true;
+});
 
 /* Navbar shrink on scroll */
-let navbar = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
 let ticking = false;
-function onScroll() {
+
+const onScroll = () => {
     if (!ticking) {
         requestAnimationFrame(() => {
-            if (
-              document.documentElement.scrollTop > 4 &&
-              document.documentElement.clientWidth > 767
-            ) {
-              navbar.classList.add("navbar-shrink")
-            } else {
-              navbar.classList.remove("navbar-shrink")
-            }
+            const shouldShrink = document.documentElement.scrollTop > 4 && document.documentElement.clientWidth > 767;
+            navbar.classList.toggle("navbar-shrink", shouldShrink);
             ticking = false;
         });
         ticking = true;
     }
-}
+};
+
 window.addEventListener('scroll', onScroll);
-
-
-
 
 /* Dark Mode Implementation  */
 const toggleButton = document.getElementById('theme-toggle');
@@ -84,5 +73,3 @@ function setTheme(isDark) {
         document.documentElement.style.setProperty('--fourth_color', '#e7eaf6');
     }
 }
-
-
