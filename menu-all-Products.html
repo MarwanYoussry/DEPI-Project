@@ -4,19 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <style>
+      .img-large {
+        width: 100%; /* Adjusts to full width of the column */
+        max-width: 400px; /* Maximum width for larger screens */
+        height: auto; /* Maintains aspect ratio */
+      }
+    
+      @media (max-width: 768px) {
+        .img-large {
+          max-width: 100%; /* Full width on smaller screens */
+        }
+      }
+    </style>
+    
   </head>
-  <body id="go-top" class="homepage-body OpenSans-font px-sm-4 px-md-5">
+  <body id="go-top" class="homepage-body OpenSans-font">
     <header>
-      <nav class="navbar navbar-expand-md fixed-top">
-        <img
-          src="assets/img/restaurant_logo.png"
-          alt=""
-          width="120px"
-          class="logo"
-        />
+      <nav class="navbar navbar-expand-md fixed-top Raleway-font">
+        <img src="assets/img/restaurant_logo.png" alt="" class="logo" />
         <div class="toggle-nav-mob">
           <i class="bi bi-list"></i>
         </div>
@@ -36,12 +45,10 @@
                   </a>
                   <ul class="dropdown-menu justify-content-center">
                     <li>
-                      <a class="dropdown-item" href="menu-products.html"
-                        >All Products</a>
+                      <a class="dropdown-item" href="menu-products.html">All Products</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="menu-categories.html"
-                        >Categories</a>
+                      <a class="dropdown-item" href="menu-categories.html">Categories</a>
                     </li>
                   </ul>
                 </div>
@@ -75,20 +82,80 @@
     <a href="menu-products.html#koshari" class="btn btn-primary" id="button4">Back to Menu</a>
   </div>
 </div>
+      </div>
+      <footer>
+        <div class="container-fluid">
+          <div class="row p-3 p-xl-4">
+            <div class="social-links">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-linkedin"></i>
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-youtube"></i>
+            </div>
+          </div>
+          <div class="row px-3">
+            <div class="col-12 col-lg-6 col-xl-4">
+              <h3 class="text-center Raleway-font">Subscribe to our Newsletter</h3>
+              <form class="footer-form">
+                <div class="row">
+                  <div class="col-6 footer_first py-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter First Name"
+                      name="first-name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="col-6 footer_last py-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Last Name"
+                      name="last-name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="col-12 footer_email my-3 py-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Email"
+                      name="email"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button role="button" class="news_btn">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="offset-2 col-4 offset-lg-1 col-lg-2 offset-xl-1 col-xl-3 footer-sec">
+              <h3 class="Raleway-font pb-3 fw-bolder">Links</h3>
+              <ul>
+                <li><a href="#go-top">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu-products.html">Menu</a></li>
+                <li><a href="menu-categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="offset-2 col-4 offset-lg-1 col-lg-2 offset-xl-1 col-xl-3 footer-sec">
+              <h3 class="Raleway-font pb-3 fw-bolder">Company</h3>
+              <ul>
+                <li><a href="">Terms of Service</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="container-fluid text-center py-3 py-lg-5">Copyright @2024 Lorem Restaurant</div>
+      </footer>
 
-<style>
-  .img-large {
-    width: 100%; /* Adjusts to full width of the column */
-    max-width: 400px; /* Maximum width for larger screens */
-    height: auto; /* Maintains aspect ratio */
-  }
-
-  @media (max-width: 768px) {
-    .img-large {
-      max-width: 100%; /* Full width on smaller screens */
-    }
-  }
-</style>
 
   
 
