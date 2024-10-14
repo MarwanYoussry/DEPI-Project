@@ -904,6 +904,7 @@ footer h3 {
 
 .contact-body{
   margin: 0;
+  overflow-x: hidden !important;
   background-color: var(--first_color);
   color: var(--fourth_color);
    padding-top: 107px; 
