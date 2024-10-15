@@ -587,6 +587,7 @@
   padding-left: 10vw;
   padding-right: 10vw;
   background-image: url(../img/menu-bg.png);
+  overflow-x: hidden !important;
 }
 
 .about-section {
