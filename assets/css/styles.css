@@ -897,3 +897,47 @@ footer > div > .row:nth-child(2) > div:nth-child(1) > h3 {
   color: var(--first_color); /* Ensure button text is readable */
 }
 
+
+
+
+
+
+/* Opening Animation */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/menu-bg.png);
+  background-color: var(--first_color);
+   color: var(--fourth_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+ 
+}
+#logo{
+  
+  width: 90%;  
+  max-width: 600px;
+  height: auto;
+
+
+}
+#logo path {
+  fill: none;
+   stroke: var(--fourth_color); 
+ stroke-width: 1;  
+   stroke-dasharray: 2000; 
+  stroke-dashoffset: 1000;
+ 
+ 
+
+}
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

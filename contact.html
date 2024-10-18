@@ -136,6 +136,22 @@
     </style>
   </head>
   <body class="contact-body" id="go-top">
+    <div class="fullscreen-overlay" id="opening-animation">
+      <svg id="logo" viewBox="0 0 500 100">
+        <!-- L -->
+        <path d="M10,10 L10,90 L50,90" />
+        <!-- O -->
+        <path d="M70,50 C70,25 90,10 110,10 C130,10 150,25 150,50 C150,75 130,90 110,90 C90,90 70,75 70,50 Z" />
+        <!-- R -->
+        <path d="M170,10 L170,90 M170,10 C195,10 220,25 220,45 C220,65 195,80 170,80 M220,80 L240,90" />
+        <!-- E -->
+        <path d="M260,10 L260,90 L300,90 M260,50 L290,50 M260,10 L300,10" />
+        <!-- M -->
+        <path d="M320,90 L320,10 L350,50 L380,10 L380,90" />
+        <!-- Decorative flourish -->
+        <path d="M400,80 Q410,70 420,80 T440,80" />
+      </svg>
+    </div>
     <header>
       <nav class="navbar navbar-expand-md fixed-top">
         <img src="assets/img/restaurant_logo.png" alt="" width="120px" class="logo" />
@@ -180,7 +196,6 @@
         <h1 class="h1-header display-4 Raleway-font">Contact Us</h1>
       </div>
 
-      <!--  <p class="p-header">We're here to help and answer any question you might have. We look forward to hearing from you!</p>  -->
     </header>
 
     <main class="container my-5">
@@ -416,6 +431,29 @@
         scale: 0.9,
         duration: 1,
       });
+
+       /* Opening Animation */
+       document.addEventListener('DOMContentLoaded', (event) => {
+        const paths = document.querySelectorAll('#logo path');
+        const overlay = document.getElementById('opening-animation');
+        
+        paths.forEach((path, index) => {
+          const length = path.getTotalLength();
+          path.style.strokeDasharray = length;
+          path.style.strokeDashoffset = length;
+          
+          path.style.animation = `drawPath 2s ease forwards ${index * 0.3}s`;
+        });
+
+        // Hide overlay after animation
+        setTimeout(() => {
+          overlay.style.opacity = '0';
+          overlay.style.transition = 'opacity 1s ease';
+          setTimeout(() => {
+            overlay.style.display = 'none';
+          }, 1000);
+        }, 3500); // Adjusted timing for "Lorem"
+      }); 
     </script>
   </body>
 </html>
